@@ -1,17 +1,7 @@
 package com.joao.gamevault.dtos;
 
-import java.util.Objects;
-
-import org.springframework.beans.BeanUtils;
-
 import com.joao.gamevault.entities.Game;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.joao.gamevault.projections.GameMinProjection;
 
 
 public class GameMinDto {
@@ -30,6 +20,14 @@ public class GameMinDto {
 		year = entity.getYear();
 		imgUrl = entity.getImgUrl();
 		shortDescription = entity.getShortDescription();
+	}
+	
+	public GameMinDto(GameMinProjection projection) {
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
 	}
 
 	public Long getId() {
