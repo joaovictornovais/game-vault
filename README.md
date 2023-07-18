@@ -28,7 +28,7 @@
 ### Deploy
 
 - A API possui um deploy na [railway](https://railway.app)
-- Você pode acessó-lo através deste [link de deploy](https://game-vault-production.up.railway.app/)
+- Você pode acessó-lo pelo [link de deploy](https://game-vault-production.up.railway.app/)
 
 O Swagger poderá ser visualizado em [swagger-ui/index.html](https://game-vault-production.up.railway.app/swagger-ui/index.html)
 
