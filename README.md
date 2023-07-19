@@ -47,11 +47,7 @@ O Swagger poderá ser visualizado em [swagger-ui/index.html](https://localhost:8
 - GET /games
 
 ```
-http :8080/games
-HTTP/1.1 200 OK
-Content-Type: application/json
-Transfer-Encoding: chunked
-
+HTTP GET :8080/games
 [
   {
     "id": 1,
@@ -73,11 +69,7 @@ Transfer-Encoding: chunked
 - GET /games/{id}
 
 ```
-http :8080/games/3
-HTTP/1.1 200 OK
-Content-Type: application/json
-Transfer-Encoding: chunked
-
+HTTP GET :8080/games/3
 {
   "id": 3,
   "title": "Game 3",
@@ -94,7 +86,7 @@ Transfer-Encoding: chunked
 - POST /lists/{listId}/replacement
 
 ```
-http POST :8080/lists/1/replacement?sourceIndex=1&destinationIndex=3
+HTTP POST :8080/lists/1/replacement sourceIndex=1 destinationIndex=3
 
 {}
 ```
@@ -102,11 +94,7 @@ http POST :8080/lists/1/replacement?sourceIndex=1&destinationIndex=3
 - GET /lists
 
 ```
-http :8080/lists
-HTTP/1.1 200 OK
-Content-Type: application/json
-Transfer-Encoding: chunked
-
+HTTP GET :8080/lists
 [
   {
     "id": 1,
@@ -122,46 +110,42 @@ Transfer-Encoding: chunked
 - GET /lists/{listId}/games
 
 ```
-http :8080/lists/1/games
-HTTP/1.1 200 OK
-Content-Type: application/json
-Transfer-Encoding: chunked
-
+HTTP GET :8080/lists/1/games
 [
   {
     "id": 1,
-    "title": "Game 1 - List 1",
+    "title": "Game 1",
     "year": 2012,
     "imgUrl": "https://www.games.com/1/imgUrl",
     "shortDescription": "Game 1 short description"
   },
   {
     "id": 2,
-    "title": "Game 2 - List 1",
+    "title": "Game 2",
     "year": 2019,
     "imgUrl": "https://www.games.com/2/imgUrl",
     "shortDescription": "Game 2 short description"
   },
   {
     "id": 3,
-    "title": "Game 3 - List 1",
+    "title": "Game 3",
     "year": 2018,
     "imgUrl": "https://www.games.com/3/imgUrl",
-    "shortDescription": "Game 2 short description!"
+    "shortDescription": "Game 3 short description!"
   },
   {
-    "id": 4,
-    "title": "Game 4 - List 1",
+    "id": 9,
+    "title": "Game 9",
     "year": 2014,
-    "imgUrl": "https://www.games.com/3/imgUrl",
-    "shortDescription": "Game 4 short description"
+    "imgUrl": "https://www.games.com/9/imgUrl",
+    "shortDescription": "Game 9 short description"
   },
   {
-    "id": 5,
-    "title": "Game 5 - List 1",
+    "id": 12,
+    "title": "Game 12 ",
     "year": 2012,
-    "imgUrl": "https://www.games.com/5/imgUrl",
-    "shortDescription": "Game 5 short description"
+    "imgUrl": "https://www.games.com/12/imgUrl",
+    "shortDescription": "Game 12 short description"
   }
 ]
 ```
