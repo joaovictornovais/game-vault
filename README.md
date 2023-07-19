@@ -44,6 +44,8 @@ O Swagger poderá ser visualizado em [swagger-ui/index.html](https://localhost:8
 
 ## API Endpoints
 
+Para fazer as requisições HTTP abaixo, foi utilizada a ferramenta [httpie](https://httpie.io/cli):
+
 - GET /games
 
 ```
