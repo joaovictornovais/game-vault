@@ -35,8 +35,14 @@ O Swagger poderá ser visualizado em [swagger-ui/index.html](https://game-vault-
 ### Localmente
 
 - Clonar repositório git
-- Importar o projeto para sua IDE
-- Executar o projeto;
+- Construir o projeto
+```
+$ ./mvnw clean package
+```
+- Executar a aplicação
+```
+$ java -jar target/game-vault-0.0.1-SNAPSHOT.jar
+```
 
 A API poderá ser acessada em [localhost:8080](https://localhost:8080)
 
